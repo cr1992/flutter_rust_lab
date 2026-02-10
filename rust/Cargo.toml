@@ -1,0 +1,26 @@
+[package]
+name = "rust_lib_my_rust_app"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+flutter_rust_bridge = "=2.11.1"
+# 推荐写法：自动匹配 1.0.x 系列中的最新版
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(frb_expand)'] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+panic = "abort"
+strip = true
+
+# Flutter 的 --profile 模式对应 rust 的 release 模式，但也可能对应 debug 模式，
+# 这取决于 flutter_rust_bridge 的集成方式。为了保险，我们显式配置 profiling。
+# 但通常 flutter run --profile 会使用 release 模式编译 rust。
