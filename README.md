@@ -47,9 +47,9 @@ flutter run --profile
 
 ## 📖 实验笔记 (深度文档)
 
-*   [性能对比深度分析报告](.gemini/antigravity/brain/ada6091a-6569-480e-8365-b4540ca6484a/performance_analysis.md)
-*   [零拷贝与流式处理 Walkthrough](.gemini/antigravity/brain/ada6091a-6569-480e-8365-b4540ca6484a/walkthrough.md)
-*   [趣味博文：为什么我折腾了 3 天 Rust 依然用了 Dart？](.gemini/antigravity/brain/ada6091a-6569-480e-8365-b4540ca6484a/blog_post.md)
+*   [性能对比深度分析报告 (JSON 解析场景)](doc/01_json_performance_analysis.md)
+*   [零拷贝与流式处理报告 (大数据场景)](doc/02_zero_copy_and_streaming_walkthrough.md)
+*   [技术博文 (Rust vs Dart 选型实战)](doc/03_rust_vs_dart_exploration_blog.md)
 
 ---
 > 本项目由 AI 辅助分析并撰写。
